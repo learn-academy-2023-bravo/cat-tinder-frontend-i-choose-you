@@ -8,7 +8,7 @@ export default function App() {
         className="text-center p-3"
         style={{ backgroundColor: "rgba(0, 0, 0, 0.2)" }}
       >
-        &copy; {new Date().getFullYear()} Copyright:{" "}
+        &copy; {new Date().getFullYear()} Spencer and Brandon Copyright:{" "}
         <a className="text-dark" href="https://mdbootstrap.com/"></a>
       </div>
     </MDBFooter>
