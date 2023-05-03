@@ -17,7 +17,7 @@ function Header(props) {
   return (
     <header>
       <Navbar>
-        <NavbarBrand className="me-auto">Pokemon!</NavbarBrand>
+        <NavbarBrand className="me-auto">I Choose You</NavbarBrand>
         <NavbarToggler onClick={toggleNavbar} className="me-2" />
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
