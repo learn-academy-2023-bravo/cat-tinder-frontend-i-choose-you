@@ -1,10 +1,9 @@
 const PokemonNew = () => {
+  return (
+    <>
+      <h3>New Pokemon</h3>
+    </>
+  );
+};
 
-    return (
-      <>
-        <h3>New Pokemon</h3>
-      </>
-    )
-  }
-  
-  export default PokemonNew
+export default PokemonNew;
