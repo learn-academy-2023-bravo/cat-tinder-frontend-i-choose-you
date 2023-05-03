@@ -28,7 +28,7 @@ function Header(props) {
               <NavLink to="/PokemonNew">Add a Pokemon</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/PokemonShow">Pokemon!</NavLink>
+              <NavLink to="/PokemonIndex">Pokemon!</NavLink>
             </NavItem>
           </Nav>
         </Collapse>
