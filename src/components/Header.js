@@ -15,8 +15,8 @@ function Header(props) {
   const toggleNavbar = () => setCollapsed(!collapsed);
 
   return (
-    <div>
-      <Navbar color="faded" light>
+    <header>
+      <Navbar>
         <NavbarBrand href="/" className="me-auto">
           Pokemon!
         </NavbarBrand>
@@ -44,7 +44,7 @@ function Header(props) {
           </Nav>
         </Collapse>
       </Navbar>
-    </div>
+    </header>
   );
 }
 
