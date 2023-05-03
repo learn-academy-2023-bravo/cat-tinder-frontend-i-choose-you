@@ -1,10 +1,9 @@
 const PokemonHome = () => {
+  return (
+    <>
+      <h3>Home page</h3>
+    </>
+  );
+};
 
-    return (
-      <>
-        <h3>Home page</h3>
-      </>
-    )
-  }
-  
-  export default PokemonHome
+export default PokemonHome;
