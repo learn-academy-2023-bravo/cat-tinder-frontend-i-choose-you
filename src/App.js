@@ -12,7 +12,11 @@ import mockPokemons from "./mockPokemons";
 import "./App.css";
 
 const App = () => {
-  const [pokemons, setPokemons] = useState(mockPokemons);
+  const [pokemons, setPokemons] = useState(mockPokemons)
+
+const createPokemon = (createdPokemon) => {
+  console.log("Created Pokemon: ", createdPokemon)
+}
 
   return (
     <>
@@ -21,7 +25,7 @@ const App = () => {
         <Route path="/" element={<PokemonHome />} />
         <Route path="/pokemonindex" element={<PokemonIndex pokemons={pokemons} />} />
         <Route path="/pokemonshow/:id" element={<PokemonShow pokemons={pokemons} />} />
-        <Route path="/pokemonnew" element={<PokemonNew />} />
+        <Route path="/pokemonnew" element={<PokemonNew createPokemon={createPokemon} />} />
         <Route path="/pokemonedit" element={<PokemonEdit />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
