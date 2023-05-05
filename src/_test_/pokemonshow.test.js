@@ -11,12 +11,13 @@ render(
       <Route path="/pokemonshow/:id" element={<PokemonShow pokemons={mockPokemons} />} />
     </Routes>
   </MemoryRouter>
+
   </>
 )
 }
 
 describe("<PokemonsShow/>", () => {
-  it("renders pokemon card with enjoy", () => {
+  it("renders pokemon card with pokedex", () => {
     renderShow()
     expect(screen.getByText(mockPokemons[0].pokedex_entry , {exact: false})).toBeInTheDocument()
     })
