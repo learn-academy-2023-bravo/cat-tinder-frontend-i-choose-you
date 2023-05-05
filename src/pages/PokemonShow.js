@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom"
 import { MemoryRouter, Routes, Route, NavLink } from "react-router-dom"
+import { Button } from "reactstrap"
 
-const Pokemonshow = ({pokemons}) => {
+const Pokemonshow = ({pokemons, deletePokemon}) => {
   const { id } = useParams()
   let selectedPokemon = pokemons?.find(pokemons => pokemons.id === +id)
   return (
@@ -14,6 +15,9 @@ const Pokemonshow = ({pokemons}) => {
           {selectedPokemon.pokedex_entry}
         </h3>
         <NavLink to={`/pokemonedit/${selectedPokemon.id}`}> Edit Pokemon Profile</NavLink>
+        <NavLink to="/pokemonindex">
+          <Button onSubmit={{deletePokemon}}>Delete Pokemon Profile</Button>
+        </NavLink>
         </>
       )}
     </main>
