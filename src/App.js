@@ -18,6 +18,11 @@ const createPokemon = (createdPokemon) => {
   console.log("Created Pokemon: ", createdPokemon)
 }
 
+const updatePokemon = (pokemon, id) => {
+  console.log("pokemon:", pokemon)
+  console.log("id:", id)
+}
+
   return (
     <>
       <Header />
@@ -26,7 +31,7 @@ const createPokemon = (createdPokemon) => {
         <Route path="/pokemonindex" element={<PokemonIndex pokemons={pokemons} />} />
         <Route path="/pokemonshow/:id" element={<PokemonShow pokemons={pokemons} />} />
         <Route path="/pokemonnew" element={<PokemonNew createPokemon={createPokemon} />} />
-        <Route path="/pokemonedit" element={<PokemonEdit />} />
+        <Route path="/pokemonedit/:id" element={<PokemonEdit pokemons={pokemons} updatePokemon={updatePokemon}/>} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

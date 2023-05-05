@@ -1,15 +1,17 @@
 import { render, screen } from "@testing-library/react"
-import { MemoryRouter, Routes, Route } from "react-router-dom"
+import { MemoryRouter, Routes, Route, NavLink } from "react-router-dom"
 import PokemonShow from "../pages/PokemonShow"
 import mockPokemons from "../mockPokemons"
 
 const renderShow = () => {
 render(
+  <>
   <MemoryRouter initialEntries={["/pokemonshow/1"]}>
     <Routes>
       <Route path="/pokemonshow/:id" element={<PokemonShow pokemons={mockPokemons} />} />
     </Routes>
   </MemoryRouter>
+  </>
 )
 }
 
