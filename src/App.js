@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { Routes, Route } from "react-router-dom";
 import PokemonHome from "./pages/PokemonHome";
 import Header from "./components/Header";
