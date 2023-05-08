@@ -22,19 +22,14 @@ header{
 .pokemon_logo{
   position: absolute;
   left: 10px;
-  width: 500px; /* default width */
+  width: 500px; 
 }
 
 @media (max-width: 768px) {
   .pokemon_logo {
-    width: 100px; /* smaller width for smaller screens */
+    width: 100px;
   }
 }
-
-
-
-
-
 
 .title{
   position: absolute;
@@ -42,7 +37,7 @@ header{
   font-size: 100px;
   bottom: 100px;
   right: 100px;
-  width: 1500px; /* default width */
+  width: 1200px; /* default width */
   color: rgba(255, 205, 2, 1);
   text-shadow: 4px 4px 25px rgba(43, 114, 254, 1);
 }
@@ -52,10 +47,23 @@ header{
   }
 }
 
+/* PokemonShow Styling */
+.show_page{
+  background-image: url("./assets/B7GKxs.png");
+  background-repeat: no-repeat;
+  width: 100%;
+  position: relative;
+}
+.show_card{
+ position: absolute;
+ left: 500px;
+ width: 18rem;
+
+}
 
 
 
-
+/* not found styling */
 .not_found{
   height: 100%;
   width: 100%;
