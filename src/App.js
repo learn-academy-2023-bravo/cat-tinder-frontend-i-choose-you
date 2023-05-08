@@ -8,11 +8,11 @@ import PokemonNew from "./pages/PokemonNew";
 import PokemonEdit from "./pages/PokemonEdit.js";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer";
-import mockPokemons from "./mockPokemons";
+// import mockPokemons from "./mockPokemons";
 import "./App.css";
 
 const App = () => {
-  const [pokemons, setPokemons] = useState(mockPokemons)
+  const [pokemons, setPokemons] = useState([])
 
   useEffect(() => {
     readPokemon()
@@ -40,9 +40,9 @@ const createPokemon = (createdPokemon) => {
     .catch((error) => console.log("Pokemon create errors:", error))
 }
 
-const updatePokemon = (pokemon, id) => {
+const updatePokemon = (selectedpokemon, id) => {
   fetch(`http://localhost:3000/pokemons/${id}`, {
-    body: JSON.stringify(pokemon),
+    body: JSON.stringify(selectedpokemon),
     headers: {
       "Content-Type": "application/json"
     },

@@ -20,6 +20,7 @@ const PokemonEdit = ({ pokemons, updatePokemon }) => {
   }
 
   const navigate = useNavigate()
+  
   const handleSubmit = () => {
     updatePokemon(editPokemon, currentPokemon.id)
     navigate("/pokemonindex")
