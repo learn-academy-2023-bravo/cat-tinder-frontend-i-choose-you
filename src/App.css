@@ -1,3 +1,4 @@
+/* button styling */
 header{
     background: linear-gradient(
       rgb(247, 4, 44) 0%,
@@ -9,10 +10,15 @@ header{
     );
 }
 
+.navlink{
+  font-family: 'Press Start 2P', cursive;
+  color: black;
+}
+
 /* Home Page Styling */
 #home_page{
   height: 100%;
-  width: 100%;
+  width: 100%; 
   position: absolute;
   background-image: url("https://imagesvc.meredithcorp.io/v3/mm/image?url=https%3A%2F%2Fstatic.onecms.io%2Fwp-content%2Fuploads%2Fsites%2F6%2F2022%2F12%2F16%2FPokemon-121622-1.jpg&q=60");
  background-size: cover;
@@ -37,13 +43,13 @@ header{
   font-size: 100px;
   bottom: 100px;
   right: 100px;
-  width: 1200px; /* default width */
+  width: 1200px; 
   color: rgba(255, 205, 2, 1);
   text-shadow: 4px 4px 25px rgba(43, 114, 254, 1);
 }
 @media (max-width: 768px) {
   .title {
-    width: 100px; /* smaller width for smaller screens */
+    width: 100px; 
   }
 }
 
@@ -58,9 +64,68 @@ header{
  position: absolute;
  left: 500px;
  width: 18rem;
-
 }
 
+/* Index Page Styling */
+.pokemon_index{
+  height: 100vh;
+  width: 100vw; 
+  background-image: url('https://wallpapercrafter.com/desktop1/628863-Pokmon-Pok-Balls-artwork-studio-shot-copy-space.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-attachment: fixed; 
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: center;
+}
+
+.pokemon_cards{
+  width: 18rem;
+  height: 36rem;
+  left: 800px;
+  margin: 10px;
+  position: relative;
+  display: flex;
+  flex-direction: column; 
+  justify-content: space-between; 
+  align-items: center; 
+}
+
+.my_page{
+  .pokemon_index{
+    height: 100vh;
+    width: 100vw; 
+    background-image: url('https://wallpapercrafter.com/desktop1/628863-Pokmon-Pok-Balls-artwork-studio-shot-copy-space.jpg');
+    background-size: cover; 
+    background-position: center; 
+    background-attachment: fixed; 
+    display: flex; 
+    flex-wrap: wrap;
+    justify-content: center; 
+    align-items: center;
+  }
+}
+.pokemon_index{
+  height: 100vh;
+  width: 100vw; 
+  background-image: url('https://wallpapercrafter.com/desktop1/628863-Pokmon-Pok-Balls-artwork-studio-shot-copy-space.jpg');
+  background-size: cover; 
+  background-position: center; 
+  background-attachment: fixed; 
+  display: flex; 
+  flex-wrap: wrap;
+  justify-content: center; 
+  align-items: center;
+}
+
+
+/* Footer Styling */
+.footer{
+  position: fixed;
+  bottom: 0; 
+  width: 100%;
+}
 
 
 /* not found styling */

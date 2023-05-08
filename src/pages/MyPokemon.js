@@ -1,19 +1,15 @@
-import { useParams, useNavigate, Link } from "react-router-dom"
+import { useParams,Link } from "react-router-dom"
 import { Button, Card, CardBody, CardTitle, CardSubtitle, CardText } from "reactstrap"
 
-const Pokemonshow = ({pokemons, deletePokemon}) => {
-  const navigate = useNavigate()
-  const handleDelete = () => {
-    deletePokemon(id)
-    navigate("/pokemonindex")
-  }
+const MyPokemon = ({pokemons, deletePokemon}) => {
   const { id } = useParams()
   let selectedPokemon = pokemons?.find(pokemon => pokemon.id === +id)
   if(!selectedPokemon) {
     return <div>Pokemon not found</div>
   }
   return (
-    <main className="show_page">
+    <main className="my_page">
+        <h1 className="partnertext">You Have Choosen Partner!!</h1>
       <Card className="show_card"
       >
         <img
@@ -34,10 +30,6 @@ const Pokemonshow = ({pokemons, deletePokemon}) => {
           <CardText>
             {selectedPokemon.pokedex_entry}
           </CardText>
-          <Button onClick={() => {window.location.href=`/mypokemon/${selectedPokemon.id}`}} className="selectbutton">
-            I Choose You!
-          </Button>
-          <Button onClick={handleDelete}> Delete Pokemon</Button>
           <Link to={`/pokemonedit/${selectedPokemon.id}`}>
   <Button className="edit_button">Update Pokemon</Button>
 </Link>
@@ -47,5 +39,4 @@ const Pokemonshow = ({pokemons, deletePokemon}) => {
   )
 }
 
-export default Pokemonshow;
-
+export default MyPokemon;

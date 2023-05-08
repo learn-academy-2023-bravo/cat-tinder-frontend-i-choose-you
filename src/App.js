@@ -8,7 +8,7 @@ import PokemonNew from "./pages/PokemonNew";
 import PokemonEdit from "./pages/PokemonEdit.js";
 import NotFound from "./pages/NotFound";
 import Footer from "./components/Footer";
-// import mockPokemons from "./mockPokemons";
+import MyPokemon from "./pages/MyPokemon";
 import "./App.css";
 
 const App = () => {
@@ -74,6 +74,7 @@ const deletePokemon = (id) => {
         <Route path="/pokemonshow/:id" element={<PokemonShow pokemons={pokemons} deletePokemon={deletePokemon} />} />
         <Route path="/pokemonnew" element={<PokemonNew createPokemon={createPokemon} />} />
         <Route path="/pokemonedit/:id" element={<PokemonEdit pokemons={pokemons} updatePokemon={updatePokemon}/>} />
+        <Route path="/mypokemon/:id" element={<MyPokemon pokemons={pokemons} deletePokemon={deletePokemon} />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

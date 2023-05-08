@@ -83,10 +83,10 @@ const handleClick = ()=>{
       </FormGroup>
        <legend>Evolve?</legend>
       <FormGroup check>
-        <Input name="radio1" type="radio" /> <Label check>YES</Label>
+        <Input name="radio1" type="radio" value={"true"} /> <Label check>YES</Label>
       </FormGroup>
       <FormGroup check>
-        <Input name="radio1" type="radio" /> <Label check>No</Label>
+        <Input name="radio1" type="radio" value={"false"} /> <Label check>No</Label>
       </FormGroup>
       <Button onClick={handleClick}>Submit</Button>
     </Form>

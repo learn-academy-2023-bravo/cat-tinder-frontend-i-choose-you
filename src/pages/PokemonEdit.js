@@ -105,12 +105,6 @@ const PokemonEdit = ({ pokemons, updatePokemon }) => {
           />
           <Label check>No</Label>
         </FormGroup>
-        {/* <FormGroup check>
-        <Input name="radio1" type="radio" /> <Label check>YES</Label>
-      </FormGroup>
-      <FormGroup check>
-        <Input name="radio1" type="radio" /> <Label check>No</Label>
-      </FormGroup> */}
         <Button onClick={handleSubmit}>Submit New Pokemon </Button>
       </Form>
     </>
