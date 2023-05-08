@@ -17,18 +17,18 @@ function Header(props) {
   return (
     <header>
       <Navbar>
-        <NavbarBrand className="me-auto">I Choose You</NavbarBrand>
-        <NavbarToggler onClick={toggleNavbar} className="me-2" />
+        <NavbarBrand className="menutitle">I Choose You</NavbarBrand>
+        <NavbarToggler onClick={toggleNavbar} className="menutoggle" />
         <Collapse isOpen={!collapsed} navbar>
           <Nav navbar>
             <NavItem>
-              <NavLink to="/">Home Page</NavLink>
+              <NavLink className={"navlink"} to="/">Home Page</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/PokemonNew">Add a Pokemon</NavLink>
+              <NavLink className={"navlink"} to="/PokemonNew">Add a Pokemon</NavLink>
             </NavItem>
             <NavItem>
-              <NavLink to="/PokemonIndex">Pokemon!</NavLink>
+              <NavLink className={"navlink"} to="/PokemonIndex">Pokemon!</NavLink>
             </NavItem>
           </Nav>
         </Collapse>

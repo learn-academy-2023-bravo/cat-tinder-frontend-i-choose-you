@@ -5,7 +5,8 @@ import {
   CarouselControl,
   CarouselIndicators,
   CarouselCaption,
-  Button
+  Button,
+  Card, CardImg, CardText, CardBody, CardTitle, CardSubtitle
 } from 'reactstrap';
 
 const PokemonIndex = ({pokemons}) => {
@@ -31,41 +32,45 @@ const PokemonIndex = ({pokemons}) => {
 
   const slides = pokemons.map((pokemon, index) => {
     return (
-      <CarouselItem
+      <CarouselItem className='pokemon_index'
         onExiting={() => setAnimating(true)}
         onExited={() => setAnimating(false)}
         key={index}
       >
-        <img src={pokemon.images} alt={pokemon.name} />
-        <CarouselCaption
-          captionText={`evolution stage: ${pokemon.evolution_stage}`}
-          captionHeader={pokemon.name}
-        />
-        <Button onClick={() => {window.location.href=`/pokemonshow/${pokemon.id}`}} className="btn btn-primary">
-          I Choose You!
-        </Button>
+        <Card className='pokemon_cards'>
+          <CardImg top src={pokemon.images} alt={pokemon.name} />
+          <CardBody>
+            <CardTitle>{pokemon.name}</CardTitle>
+            <CardSubtitle>{`evolution stage: ${pokemon.evolution_stage}`}</CardSubtitle>
+            <Button onClick={() => {window.location.href=`/pokemonshow/${pokemon.id}`}} className="btn btn-primary">
+              I Choose You!
+            </Button>
+          </CardBody>
+        </Card>
       </CarouselItem>
     );
   });
+  
 
   return (
     <Carousel
       activeIndex={activeIndex}
       next={next}
       previous={previous}
+      intereval={false}
     >
-      <CarouselIndicators
+      <CarouselIndicators className='carousel_indicators'
         items={pokemons}
         activeIndex={activeIndex}
         onClickHandler={goToIndex}
       />
       {slides}
-      <CarouselControl
+      <CarouselControl className='carousel_control'
         direction="prev"
         directionText="Previous"
         onClickHandler={previous}
       />
-      <CarouselControl
+      <CarouselControl className='carousel_control'
         direction="next"
         directionText="Next"
         onClickHandler={next}
