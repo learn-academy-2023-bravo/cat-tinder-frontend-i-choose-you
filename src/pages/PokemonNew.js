@@ -38,17 +38,6 @@ const handleClick = ()=>{
         />
       </FormGroup>
       <FormGroup>
-        <Label for="Pokemon-evolve">Evolve?</Label>
-        <Input
-          id="Pokemon-evolve"
-          name="evolve"
-          placeholder="Does this pokemon evolve?"
-          type="text"
-          onChange={handleChange}
-          value={newPokemon.evolve}
-        />
-      </FormGroup>
-      <FormGroup>
         <Label for="Pokemon-evolution-stage">Evolution Stage</Label>
         <Input
           id="Pokemon-evolution-stage"
